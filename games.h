@@ -7,6 +7,7 @@ protected:
 	Status GameStatus;
 public:
 	Game ();
+	~Game();
 	inline uint32_t getKey () { return SearchKey; }
 
 	virtual int getGameStatus ( void *opt = nullptr ) { return GameStatus; }
@@ -14,8 +15,13 @@ public:
 	virtual void DisplayGame() = 0;
 	virtual int TurnInfo () = 0;
 	virtual void Settle ();
+
+	inline int getGameCount () { return GameCount; }
 private:
+	static int GameCount;
+
 	uint64_t SearchKey;
+	
 	uint64_t searchKeyGen();
 };
 
