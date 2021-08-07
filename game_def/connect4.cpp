@@ -125,10 +125,11 @@ int Connect4::MakeDecision ( void *target ) {
                     Game::GameStatus = TIE;
                 }
             }
-            break;
+            return 0;
         }
     }
-    return 0;
+	puts("== Connect4::MakeDecision: Error: Did not find valid postion");
+    return -3; //should not happen
 }
 
 int Connect4::TurnInfo () {

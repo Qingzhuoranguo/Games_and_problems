@@ -15,7 +15,7 @@ int main () {
     std::cout << ptr->MakeDecision(&b) << std::endl;
     std::cout << ptr->MakeDecision(&a) << std::endl;
     std::cout << ptr->MakeDecision(&b) << std::endl;
-
+    ptr->DisplayGame();
     std::cout << "checkwin " << ptr->getGameStatus() << std::endl;
     ptr->Settle();
     return 0;
