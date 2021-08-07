@@ -101,7 +101,7 @@ int Connect4::MakeDecision ( void *target ) {
     }
     // Game still ON:
     int pos = *(int *)target - 1;
-    if ( not isValidDecision( pos ) ) {
+    if ( ! isValidDecision( pos ) ) {
         return -2;
     }
     // find the last unoccuppied position

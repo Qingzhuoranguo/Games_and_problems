@@ -6,7 +6,7 @@ int main () {
     Connect4 instance;
     Game *ptr = &instance;
 
-    int a = 1, b = 2, c=3;
+    int a = 1, b = 2;
     std::cout << ptr->MakeDecision(&a) << std::endl;
     std::cout << ptr->MakeDecision(&b) << std::endl;
     std::cout << ptr->MakeDecision(&a) << std::endl;

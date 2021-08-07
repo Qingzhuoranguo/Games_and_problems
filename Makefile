@@ -7,8 +7,10 @@ src_def := game_def
 
 GAMES = connect4.o chess.o
 
-all: test run
+all: init test run
 
+init:
+	mkdir -p $(src_obj)
 run:
 	./test
 
@@ -31,4 +33,3 @@ chess.o: $(DEPS) $(src_def)/chess.cpp
 
 clean:
 	rm -f *.o $(src_obj)/*.o test test.exe
-
